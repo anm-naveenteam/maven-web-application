@@ -34,6 +34,12 @@ node{
     properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '6', daysToKeepStr: '', numToKeepStr: '6')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * * * *')])])
     
     def mavenhome = tool name: 'maven3.8.5'
+    
+    try{
+    }//Try closing
+    
+    }//Node closing
+    
     //get the code from github repo
     stage('checkoutcode'){
      git branch: 'development', credentialsId: '60570728-c90d-458e-af71-3fe33506d77b', url: 'https://github.com/anm-naveenteam/maven-web-application.git'   

@@ -65,7 +65,7 @@ node{
 
 }
 */
-}//Try closing
+}//Try cLosing
   catch(e){
   currentBuild.result = "FAILED"
   }

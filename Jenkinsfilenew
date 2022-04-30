@@ -36,7 +36,8 @@ node{
     def mavenhome = tool name: 'maven3.8.5'
     
     try{
-     }//Try closing
+    
+    }//Try cLosing
     
     }//Node closing
     
@@ -65,7 +66,7 @@ node{
 
 }
 */
- }//Try cLosing
+}//Try cLosing
   catch(e){
   currentBuild.result = "FAILED"
   }

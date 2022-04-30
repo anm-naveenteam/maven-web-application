@@ -35,9 +35,6 @@ node{
     
     def mavenhome = tool name: 'maven3.8.5'
     
-    try{
-    sendslacknotification('STARTED')
-    
     //get the code from github repo
     stage('checkoutcode'){
      git branch: 'development', credentialsId: '60570728-c90d-458e-af71-3fe33506d77b', url: 'https://github.com/anm-naveenteam/maven-web-application.git'   
@@ -63,12 +60,4 @@ node{
 
 }
 */
-}//Try cLosing
-  catch(e){
-  currentBuild.result = "FAILED"
-  }
-  Finally{
-
-sendslacknotifications(currentBuild.result)
 }
-}//Node closing
